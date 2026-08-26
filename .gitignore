@@ -18,5 +18,9 @@ __pycache__/
 Thumbs.db
 *.log
 
-# Checkpoints: Keep final adapters and metrics, ignore intermediate step dumps
+# Checkpoints & Model Weights
+*.safetensors
+*.pt
+*.bin
+*.pth
 checkpoints/**/checkpoint-*/
