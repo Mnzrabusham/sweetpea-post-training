@@ -1,0 +1,22 @@
+# Environment
+.venv/
+env/
+venv/
+*.env
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# SAT Solver Temporary Files
+*.cnf
+
+# OS & Logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Checkpoints: Keep final adapters and metrics, ignore intermediate step dumps
+checkpoints/**/checkpoint-*/

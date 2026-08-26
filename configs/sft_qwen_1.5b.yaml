@@ -1,0 +1,49 @@
+# SFT Training Recipe Configuration: Qwen2.5-Coder-1.5B-Instruct on SweetPea DSL
+model:
+  name_or_path: "Qwen/Qwen2.5-Coder-1.5B-Instruct"
+  torch_dtype: "bfloat16"
+  use_flash_attention_2: false # Set true if flash-attn installed; otherwise PyTorch SDPA is used natively
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: "none"
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+data:
+  train_file: "data/train.jsonl"
+  val_file: "data/val.jsonl"
+  max_seq_length: 1024
+  response_template: "<|im_start|>assistant\n"
+
+training:
+  output_dir: "checkpoints/sft_qwen_1.5b"
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4 # Effective batch size = 16
+  learning_rate: 2.0e-4
+  lr_scheduler_type: "cosine"
+  warmup_steps: 10
+  weight_decay: 0.01
+  logging_steps: 10
+  eval_strategy: "steps"
+  eval_steps: 25
+  save_strategy: "steps"
+  save_steps: 25
+  save_total_limit: 2
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+  bf16: true
+  fp16: false
+  seed: 42
+  report_to: "none"

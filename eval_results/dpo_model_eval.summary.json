@@ -1,0 +1,50 @@
+{
+  "num_eval_samples": 150,
+  "pass_rate_pass_at_1": 0.0,
+  "mean_stepped_score": 0.29999999999999954,
+  "total_eval_time_sec": 308.5380559000041,
+  "generation_time_sec": 236.1582258999988,
+  "grading_time_sec": 72.37983000000531,
+  "error_distribution": {
+    "AttributeError": 137,
+    "TypeError": 9,
+    "ValueError": 4
+  },
+  "family_breakdown": {
+    "factorial_crossing": {
+      "pass_rate": 0.0,
+      "mean_score": 0.2999999999999999,
+      "n": 23
+    },
+    "partial_crossing": {
+      "pass_rate": 0.0,
+      "mean_score": 0.29999999999999993,
+      "n": 27
+    },
+    "stroop_congruency": {
+      "pass_rate": 0.0,
+      "mean_score": 0.29999999999999993,
+      "n": 15
+    },
+    "constrained_design": {
+      "pass_rate": 0.0,
+      "mean_score": 0.29999999999999993,
+      "n": 21
+    },
+    "task_switching_transition": {
+      "pass_rate": 0.0,
+      "mean_score": 0.29999999999999993,
+      "n": 28
+    },
+    "flanker_task": {
+      "pass_rate": 0.0,
+      "mean_score": 0.29999999999999993,
+      "n": 12
+    },
+    "nback_window": {
+      "pass_rate": 0.0,
+      "mean_score": 0.2999999999999999,
+      "n": 24
+    }
+  }
+}
