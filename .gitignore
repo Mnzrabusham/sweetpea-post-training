@@ -24,3 +24,9 @@ Thumbs.db
 *.bin
 *.pth
 checkpoints/**/checkpoint-*/
+
+# Personal Notes & Study Material (Kept locally, excluded from public repo)
+study-plan*
+*.pdf
+reports/phase-*
+

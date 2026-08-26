@@ -59,10 +59,7 @@ Every checkpoint was evaluated on the identical held-out test suite ($N = 150$ e
 │   ├── evaluate.py                      # Batched GPU inference + parallel compiler execution grader
 │   └── statistical_analysis.py          # Cluster bootstrap, permutation tests, MDE & simulation
 ├── reports/
-│   ├── phase-1-sft-mechanics-deep-dive.md              # Detailed SFT theory & practitioner guide
-│   ├── phase-2-dpo-preference-optimization-deep-dive.md # DPO math, reward dynamics & findings
-│   ├── phase-3-statistical-rigour-and-evaluation-deep-dive.md # Statistical inference & power guide
-│   └── statistical_evaluation_report.md                # Publication-style benchmark report
+│   └── statistical_evaluation_report.md # Empirical benchmark report & statistical inference
 └── eval_results/
     ├── base_model_eval.jsonl            # Baseline raw trials log
     ├── sft_model_eval.jsonl             # SFT raw trials log
@@ -123,12 +120,10 @@ python src/statistical_analysis.py
 
 ---
 
-## 📚 Technical Deep Dives
+## 📄 Statistical Evaluation Report
 
-For exhaustive practitioner notes, mathematical derivations, and interview talking points, refer to the reports:
-- [**Phase 1 Deep Dive: SFT Mechanics & Recipe Space**](reports/phase-1-sft-mechanics-deep-dive.md)
-- [**Phase 2 Deep Dive: DPO Preference Optimization & Verifiable Data**](reports/phase-2-dpo-preference-optimization-deep-dive.md)
-- [**Phase 3 Deep Dive: Statistical Rigour, Power Analysis, & Noise Floors**](reports/phase-3-statistical-rigour-and-evaluation-deep-dive.md)
+For the full empirical breakdown, cluster bootstrap distributions, and MDE calculations, see:
+- [**Statistical Evaluation Report**](reports/statistical_evaluation_report.md)
 
 ---
 
